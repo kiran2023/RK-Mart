@@ -1,0 +1,67 @@
+{
+  "registrationLog": [
+    {
+      "message": "New User Registration: {\"username\":\"DemoTest\",\"mail\":\"demo@gmail.com\",\"mobile\":\"9585856858\",\"password\":\"U2FsdGVkX19QjdbBU+8KxGrvGWKHS3RO+HxzE99UoGY=\"}",
+      "level": "INFO",
+      "timestamp": "8/8/2023, 9:59:29 am",
+      "id": 1
+    },
+    {
+      "message": "New User Registration: {\"username\":\"Kiran\",\"mail\":\"ram@gmail.com\",\"mobile\":\"9499845949\",\"password\":\"U2FsdGVkX181DgutlSAkk3cGyXWSJntoCyxeqswyfKU=\"}",
+      "level": "INFO",
+      "timestamp": "10/8/2023, 10:05:41 am",
+      "id": 2
+    }
+  ],
+  "errorLog": [
+    {
+      "message": "Server Down : {\"headers\":{\"normalizedNames\":{},\"lazyUpdate\":null,\"headers\":{}},\"status\":0,\"statusText\":\"Unknown Error\",\"url\":\"http://localhost:3000/orders?uid=4\",\"ok\":false,\"name\":\"HttpErrorResponse\",\"message\":\"Http failure response for http://localhost:3000/orders?uid=4: 0 Unknown Error\",\"error\":{\"isTrusted\":true}}",
+      "level": "ERROR",
+      "timestamp": "8/8/2023, 10:07:57 am",
+      "id": 1
+    }
+  ],
+  "invalidLoginLog": [
+    {
+      "message": "Invalid Login Attempt : \"demo@gmail.com\"",
+      "level": "WARN",
+      "timestamp": "8/8/2023, 9:59:29 am",
+      "id": 1
+    },
+    {
+      "message": "Invalid Login Attempt : \"demo@gmail.com\"",
+      "level": "WARN",
+      "timestamp": "8/8/2023, 9:59:29 am",
+      "id": 2
+    }
+  ],
+  "adminErrorLogData": [
+    {
+      "errorMessage": "Error During Displaying Category  {\"headers\":{\"normalizedNames\":{},\"lazyUpdate\":null,\"headers\":{}},\"status\":0,\"statusText\":\"Unknown Error\",\"url\":\"http://localhost:3000/category\",\"ok\":false,\"name\":\"HttpErrorResponse\",\"message\":\"Http failure response for http://localhost:3000/category: 0 Unknown Error\",\"error\":{\"isTrusted\":true}} ",
+      "level": "ERROR",
+      "timestamp": "8/8/2023, 10:10:40 am",
+      "id": 1
+    },
+    {
+      "errorMessage": "Error During Displaying Category  {\"headers\":{\"normalizedNames\":{},\"lazyUpdate\":null,\"headers\":{}},\"status\":0,\"statusText\":\"Unknown Error\",\"url\":\"http://localhost:3000/category\",\"ok\":false,\"name\":\"HttpErrorResponse\",\"message\":\"Http failure response for http://localhost:3000/category: 0 Unknown Error\",\"error\":{\"isTrusted\":true}} ",
+      "level": "ERROR",
+      "timestamp": "10/8/2023, 10:16:36 am",
+      "id": 2
+    },
+    {
+      "errorMessage": "Error During Displaying Category  {\"headers\":{\"normalizedNames\":{},\"lazyUpdate\":null,\"headers\":{}},\"status\":0,\"statusText\":\"Unknown Error\",\"url\":\"http://localhost:3000/category\",\"ok\":false,\"name\":\"HttpErrorResponse\",\"message\":\"Http failure response for http://localhost:3000/category: 0 Unknown Error\",\"error\":{\"isTrusted\":true}} ",
+      "level": "ERROR",
+      "timestamp": "10/8/2023, 10:16:44 am",
+      "id": 3
+    }
+  ],
+  "paymentErrorLogData": [
+    {
+      "message": "User Payment Error data: \"4\"",
+      "level": "ERROR",
+      "timestamp": "10/8/2023, 10:05:41 am",
+      "shippingData": "[object Object]",
+      "id": 1
+    }
+  ]
+}

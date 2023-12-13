@@ -1,0 +1,60 @@
+<app-menu></app-menu>
+<div class="queryBackBtn">
+  <h2 routerLink="/contactUs"> <button class="btn"> <i class="fa-solid fa-arrow-right fa-flip-horizontal"></i> Back
+    </button></h2>
+</div>
+<section *ngIf="query">
+
+  <div class="container">
+
+    <div class="querySection" >
+      <div class="queryBox" *ngFor="let query of queryAddressedData">
+        <div class="grid">
+          <div class="query">
+            <h3>User Name</h3>
+            <p> {{query.username}} </p>
+          </div>
+          <div class="query">
+            <h3>Subject</h3>
+            <p> {{query.email}} </p>
+          </div>
+        </div>
+        <hr>
+        <div class="query">
+          <h3>Subject</h3>
+          <p> {{query.subject}} </p>
+        </div>
+        <hr>
+        <div class="query">
+          <h3>Query</h3>
+          <p> {{query.textarea}} </p>
+        </div>
+        <hr>
+        <div class="query">
+          <h3>Addressed Query</h3>
+          <p> {{query.addressingData}} </p>
+          <p *ngIf="query.addressingData==undefined||null"> <mark>Awaiting Response try back after sometime</mark> </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div *ngIf="!query">
+  <div class="queryDiv">
+    <div class="">
+      <img
+        src="{{noQueriesFoundImage}}"
+        alt="No Queries Raised">
+      <div class="continueShopping">
+        <h3>No Queries Has Been Raised</h3>
+        <div class="queriesRedirect">
+          <a routerLink="/products"> <button class="btn">Continue Shopping</button> </a>
+          <a routerLink="/contactUs"> <button class="btn">Raise Query</button> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

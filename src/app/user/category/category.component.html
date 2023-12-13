@@ -1,0 +1,100 @@
+<div class="mainDivison bevergeSection">
+    <div class="category-bar" (click)="toggleCategory()">
+        <p  id="categoryBar"> <i class="fa-solid fa-bars"></i> Filter</p>
+        <p  id="categoryCloseMenu"> <i class="fa-solid fa-xmark"></i> Filter</p>
+    </div>
+    <div class="twoSection sectionGrid">
+    
+        <div class="categoryData">
+            <aside>
+                <h2>Filters</h2>
+                <hr>
+                <h5> <b class="findProduct"> Categories </b></h5>
+                <a *ngIf="category!=''" id="categoryBackButton"> <button routerLink="../" class="btn"><i
+                            class="fa-solid fa-arrow-left"></i> Back</button> </a>
+                <ng-container *ngFor="let categoryType of categoryTypes">
+                    <h3 class="categoryDetails">
+                        <div *ngIf="categoryType==this.currentCategory||category==''">
+                            <a routerLink="/products/{{categoryType}}"
+                                class="categoryAvailable">{{categoryType|titlecase}} <i
+                                    class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </h3>
+                </ng-container>
+
+                <h4 class="categoryChoosen"></h4>
+                <hr>
+
+                <div class="brands categoryAvailable">
+                    <ng-container *ngFor="let category of categoryDisplay">
+                        <ng-container *ngIf="category.categoryType==this.currentCategory||this.currentCategory==null">
+                            <h5> <b> {{category.categoryType}} </b> </h5>
+                            <ul>
+                                <li *ngFor="let categoryData of category.category, index as i">
+                                    <input type="checkbox"
+                                        (change)="categorySelected(category?.categoryUniqueValue[i], $event)"
+                                        name={{categoryData}} attr.data-btn-num={{category?.categoryUniqueValue[i]}}
+                                        value={{category?.categoryUniqueValue[i]}} class={{category?.categoryClass[i]}}>
+                                    {{categoryData|titlecase}}
+                                </li>
+                            </ul>
+                        </ng-container>
+                    </ng-container>
+                </div>
+                <hr>
+                <div class="accordin" *ngIf="offerApply=='true'">
+                    <input type="checkbox" name="discount" id="accordinData" class="accordinInput">
+                    <label for="accordinData" class="accordinLabel">
+                        <h5><b>Discounts</b></h5> <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <div class="discountData">
+                        <ul (click)="discountData($event)">
+                            <li> <input type="checkbox" name="50% or More Discounted" class="checkbox"
+                                    id="discountCheckBox" data-btn-num="23" value="50"> 50%
+                                or more </li>
+                            <li> <input type="checkbox" name="40% or More Discounted" class="checkbox"
+                                    id="discountCheckBox" data-btn-num="24" value="40"> 40%
+                                or more </li>
+                            <li> <input type="checkbox" name="30% or More Discounted" class="checkbox"
+                                    id="discountCheckBox" data-btn-num="25" value="30"> 30%
+                                or more </li>
+                            <li> <input type="checkbox" name="20% or More Discounted" class="checkbox"
+                                    id="discountCheckBox" data-btn-num="26" value="20"> 20%
+                                or more </li>
+                            <li> <input type="checkbox" name="10% or More Discounted" class="checkbox"
+                                    id="discountCheckBox" data-btn-num="27" value="10"> 10%
+                                or more </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="accordin">
+                    <input type="checkbox" name="discount" id="accordinData2" class="accordinInput">
+                    <label for="accordinData2" class="accordinLabel">
+                        <h5><b>Customer Ratings</b></h5> <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <div class="discountData">
+                        <ul (click)="reviewData($event)">
+                            <li> <input type="checkbox" class="checkbox" id="reviewData" name="4 &#9733; & above Rated"
+                                    data-btn-num="28" value="4"> 4
+                                <span class="reviewStar">&#9733;</span> & above
+                            </li>
+                            <li> <input type="checkbox" class="checkbox" id="reviewData" name="3 &#9733; & above Rated"
+                                    data-btn-num="29" value="3"> 3
+                                <span class="reviewStar">&#9733;</span> & above
+                            </li>
+                            <li> <input type="checkbox" class="checkbox" id="reviewData" name="2 &#9733; & above Rated"
+                                    data-btn-num="30" value="2"> 2
+                                <span class="reviewStar">&#9733;</span> & above
+                            </li>
+                            <li> <input type="checkbox" class="checkbox" id="reviewData" name="1 &#9733; & above Rated"
+                                    data-btn-num="31" value="1"> 1
+                                <span class="reviewStar">&#9733;</span> & above
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>

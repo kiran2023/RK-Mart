@@ -1,0 +1,137 @@
+.payment-two-columns{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.paymentBox {
+    border: 2px solid var(--btns-background);
+    width: min-content;
+    height: max-content;
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: 2rem;
+}
+
+.paymentBox .paymentHeader{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+
+.paymentSection {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+
+.cardInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInfo input, select {
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 0.2rem 1rem;
+    border: 2px solid var(--btns-background);
+}
+
+.form_fields{
+    margin: 0.8rem 0;
+}
+
+.cardInfo label{
+    margin: 0 1rem;
+}
+
+.paymentSection .button {
+    margin: 0 1rem;
+}
+
+.paymentButton-two-columns {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+form .form_fields {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+textarea {
+    width: 100%;
+    outline: none;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+form option{
+    font-size: 1.2rem;
+}
+
+.errorMessage{
+    position: relative;
+    color: #Ff0000;
+}
+
+#errorMessageDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#errorMessageDiv p{
+    color: #Ff0000;
+}
+
+
+/* PAYMENT SUCCESSFUL MESSAGE */
+
+.paymentModal {
+    width: 100%;
+    margin: auto;
+    background: none;
+    border: none;
+}
+
+.successMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successMessage .modalBox {
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid var(--btns-background);
+    margin: 4rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.successMessage .modalBox h2 {
+    margin: 1.5rem;
+    font-size: 900;
+}
+
+.successMessage .button {
+    margin: 0;
+    color: var(--white);
+    font-weight: 900;
+}
+
+.paymentDiv{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.paymentDiv img{
+    width: 15rem;
+}

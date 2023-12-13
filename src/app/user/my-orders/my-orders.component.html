@@ -1,0 +1,81 @@
+<app-menu></app-menu>
+
+<div class="orders">
+  <h2 routerLink="../"> <button class="btn"> <i class="fa-solid fa-arrow-right fa-flip-horizontal"></i> Back </button>
+  </h2>
+</div>
+<div id="myOrderHead" *ngIf="orderData.length!=0">
+  <h2> Orders </h2>
+</div>
+
+<div id="orderPage" *ngIf="orderData.length!=0">
+  <div class="container orderDataBox">
+    <div class="orderBox">
+      <ng-container *ngFor="let orderData of orderData">
+        <div class="orderStatusData">
+          <p id="OrderId"> <b> Order Id: </b> {{orderData.orderUniqueId}} </p>
+          <p id="OrderStatus"> <b> Ordered On : </b> {{orderData.orderDate}} </p>
+          <div class="deliveryExcepted"
+            *ngIf=" orderData.orderStatus !='Delivered' && orderData.orderStatus !='Cancelled' "> <b> Delivery Excepted
+              : </b> {{orderData.delivery}} </div>
+          <div class="deliveryExcepted" *ngIf=" orderData.orderStatus =='Delivered'"> <b> Delivered on : </b>
+            {{orderData.delivery}} </div>
+          <div class="reviewRatingSection"
+            *ngIf="orderData.orderStatus =='Delivered' && orderData.reviewStatus=='false' ">
+            <div class="reviewSection">
+              <p> <b> Rating </b>
+                <span *ngFor="let star of [1, 2, 3, 4, 5]" (click)="onStarClick(orderData.productid,star)">
+                  <i class="fa fa-star" [ngClass]="{'checked': star <= userRating[orderData.productid]}"></i>
+                </span>
+              </p>
+              <div id="reviewSubmitButton">
+                <button class="btn" (click)="submitRating(orderData.productid, orderData.orderId)"> Submit </button>
+              </div>
+            </div>
+          </div>
+          <button class="btn" id="cancelOrder"
+            (click)="cancelOrder(orderData.orderUniqueId, orderData.productid, orderData.quantity, orderData.delivery)"
+            *ngIf=" orderData.orderStatus !='Delivered' && orderData.orderStatus !='Cancelled' && orderData.deliveryDeadline == false ">Cancel
+            Order</button>
+          <div class="deliveryExcepted"
+            *ngIf=" orderData.orderStatus !='Delivered' && orderData.orderStatus !='Cancelled' && orderData.deliveryDeadline == true">
+            <b> Order Deliver Soon </b>
+          </div>
+          <div class="deliveryExcepted" title="Download" (click)="printOrder(orderData)" >
+            <i class="fa-solid fa-download"></i>
+          </div>
+        </div>
+        <!-- <hr> -->
+        <div class="orderDescriptionData order-grid order-grid-four-column">
+          <div class="productImageData">
+            <img src="{{orderData.image}}" alt="">
+          </div>
+          <div class="productDetails">
+            <p id="productName">{{ orderData.productName }}</p>
+            <div class="productDetailsData order-grid order-grid-two-column">
+              <p id="productQuantity"> <b>Quantity : </b>{{ orderData.quantity }}</p>
+              <p id="productPrice"> <b> Price : </b> {{ orderData.originalAmount }} </p>
+            </div>
+          </div>
+          <div class="orderStatus"> <b [appOrderStatus]="orderData.orderStatus" > Status : {{orderData.orderStatus}} </b></div>
+          <div class="total"> <b> Total : </b> {{ orderData.originalAmount * orderData.quantity}}</div>
+        </div>
+        <hr>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="orderData.length==0">
+  <div class="orderDiv">
+    <div class="">
+      <img
+        src={{emptyOrderImage}}
+        alt="No Order Has been Placed">
+      <div class="continueShopping">
+        <p>No orders has been Placed</p>
+        <a routerLink="/products"> <button class="btn">Order Now</button> </a>
+      </div>
+    </div>
+  </div>
+</div>

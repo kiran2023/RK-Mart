@@ -1,0 +1,67 @@
+<app-menu></app-menu>
+
+<div class="grid-section grid-two-section">
+  <app-category></app-category>
+ 
+  <div>
+    <div class="searchBox">
+      <input type="search" id="productBox" class="clearSearch" [(ngModel)]="searchData" (ngModelChange)="searchProduct($event)" placeholder="Search Products">
+    </div>
+    <div class="scrollToTop" *ngIf="isScrollActive" (click)="scrollToTop()"><i
+        class="fa-solid fa-arrow-up scrollBtn"></i></div>
+
+    <div class="productsDiv productGrid grid-four-columns">
+      <div *ngFor="let product of updatedProducts">
+
+        <ng-container>
+          <a routerLink="productDescription/{{product.id}}">
+            <div class="productBox groceryProducts grocery {{product.classData}}"
+              attr.filtervalue="{{product.filterValue}}" attr.uniqueid="{{product.uniqueId}}"
+              attr.value="{{product.value}}" attr.reviewrating="{{product.ratingAverage}}">
+              <div class="productImage">
+                <figure><a>
+                    <div class="imagePosition"><img [src]="product.image" alt={{product.alt}} title={{product.title}}>
+                    </div>
+                  </a>
+                  <figcaption class="figCaptionDiv"><b class="findProduct">{{product.productName}}</b></figcaption>
+                  <div class="addWishlistDiv">
+                    <button *ngIf="product.Stock>0" class="btnD"
+                      [attr.title]="product.Stock + ' Available'">{{product.Stock}} Available</button>
+                    <button *ngIf="product.Stock==0" class="btnD addRemove" title="Add to Category">Out Of
+                      Stock</button>
+                  </div>
+                </figure>
+              </div>
+              <div class="productDetails"><small>{{product.quantity}}</small></div>
+              <div class="productPrice">
+                <div class="ratings"><span class="rating"
+                    [attr.title]=" product.ratingAverage + ' Average Rated' ">{{product.ratingAverage}}<i
+                      class="fa-solid fa-star fa-xs"></i></span><span
+                    [attr.title]=" product.rating.length + ' Verified Reviews' ">({{product.rating.length}})</span>
+                </div>
+                <div>
+                  <p *ngIf="offerApply=='true'" class="discount price-box">{{product.originalAmount|currency:'INR': 'symbol' :
+                    '1.0-0'}}<s class="price-box">{{product.discounted|currency:'INR': 'symbol' : '1.0-0'}}</s><button
+                      class="btnD offerBtn"><small
+                        class="price-box">{{((product.originalAmount-product.discounted)/product.discounted)|discount}}
+                        OFF</small></button>
+                  </p>
+                </div>
+                <div *ngIf="offerApply=='false'">
+                  <p class="discount price-box"><b> Price :
+                      {{product.discounted|currency:'INR':
+                      'symbol' : '1.0-0'}} </b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="noProductFound" *ngIf="updatedProducts.length==0">
+  <img src="{{productNotFoundImage}}" alt="No Product found">
+</div>

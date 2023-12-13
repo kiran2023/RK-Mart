@@ -1,0 +1,162 @@
+.orderDiv {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.orderDiv img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.orderDiv p {
+  font-size: 1.2rem;
+  color: var(--btns-background);
+  font-weight: 900;
+}
+
+.continueShopping {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+}
+
+.orderMenu {
+  position: relative;
+}
+
+.order {
+  margin-right: 0.8rem;
+}
+
+#orderPage {
+  background-color: rgb(255, 253, 253);
+}
+
+.orderDataBox {
+  display: grid;
+  place-items: center;
+}
+
+#myOrderHead {
+  display: flex;
+  justify-content: center;
+}
+
+.orderBox {
+  width: 80%;
+  height: max-content;
+  padding: 3rem;
+  margin-top: 1rem;
+  background-color: var(--white);
+  border: 0.1rem solid var(--btns-background);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.orderStatusData {
+  height: 5rem;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+#OrderId,
+#OrderStatus,
+#payment {
+  margin-top: 1.5rem;
+}
+
+#cancelOrder {
+  height: 3rem;
+  width: max-content;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+}
+
+.order-grid {
+  display: grid;
+}
+
+.order-grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.order-grid-four-column {
+  grid-template-columns: 15% 30% 30% 25%;
+}
+
+.productImageData img {
+  width: 7rem;
+  height: 7rem;
+  padding: 1rem;
+}
+
+#productName {
+  color: var(--btns-background);
+  font-weight: 900;
+}
+
+.productDetailsData {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productDetails p {
+  margin: 1rem 0;
+}
+
+.orderStatus,
+.total {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 4rem 4rem;
+}
+
+.deliveryExcepted{
+  padding-top: 1.5rem;
+}
+
+.orders {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.orders h2 {
+  margin-top: 5rem;
+  margin-left: 4rem;
+}
+
+.orderPageLine{
+  color: red;
+}
+
+.reviewRatingSection {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.reviewRatingSection .btn {
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  width: max-content;
+}
+
+.fa-star {
+  color: gray;
+  cursor: pointer;
+}
+
+.checked {
+  color: gold;
+}
+
+.reviewSection{
+  display: flex;
+  line-height: 4rem;
+  margin: 0 0.4rem;
+}

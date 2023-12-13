@@ -1,0 +1,408 @@
+:root {
+  --offer-head: rgb(26, 170, 26);
+}
+
+.productsDescriptionBox {
+  margin: 0 5rem;
+  height: 100%;
+  padding-top: 8rem;
+}
+
+.productGrid {
+  display: grid;
+}
+
+.productDescription .productCostData h4 {
+  color: rgb(26, 170, 26);
+}
+
+.productgrid-two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.featuredProducts {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ProductDescriptionSection {
+  float: left;
+}
+
+.ProductDescriptionSection a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ProductDescriptionSection ul li {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.mainImageDiv {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+}
+
+.mainImageDiv img {
+  box-shadow: var(--background-hover);
+}
+
+.mainImageDiv img {
+  max-width: 100%;
+  height: 15rem;
+  cursor: zoom-in;
+  transition: all 0.3s ease;
+}
+
+.mainImageDiv #userStatus {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--btns-background);
+}
+
+.productImageGrid {
+  display: grid;
+}
+
+.productImage {
+  flex-direction: column;
+}
+
+.image1 img {
+  max-width: 120px;
+  height: 120px;
+  margin: 0.5rem;
+  transition: all 0.6s ease-in-out;
+}
+
+.activeImageHighlight {
+  transform: translateY(-10px);
+}
+
+.imageactive {
+  border: 4px solid var(--btns-background);
+}
+
+.addToCart {
+  width: max-content;
+  height: 4rem;
+  padding: 1rem;
+  border: 0.2rem solid var(--btns-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  margin: 1rem;
+  cursor: grab;
+}
+
+.addToCart:hover {
+  background-color: var(--btns-background);
+  color: var(--white);
+}
+
+.buyAddCart {
+  display: flex;
+}
+
+.addRemove{
+  border: 0.1rem solid #ff0000;
+  background: none;
+  border: 0.1rem solid #ff0000;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: #ff0000;
+}
+
+/* RIGHT SIDE DATA */
+
+.productRatings {
+  margin-top: 1rem;
+}
+
+.productRatings .ratings .rating {
+  background-color: var(--rating);
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 2px 4px 2px 6px;
+  margin-right: 1rem;
+  border-radius: 0.4rem;
+}
+
+.productCostData {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.productGrid h4 {
+  color: var(--offer-head);
+}
+
+.productDiscounts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.productDiscounts .productRate {
+  font-size: 1.4rem;
+  padding: 1rem 1rem 1rem 0;
+  font-weight: 900;
+}
+
+.productDiscounts s {
+  padding: 1rem 1rem 1rem 0;
+  color: var(--grey);
+}
+
+.productDiscounts small {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.offerBtn {
+  position: absolute;
+  right: 0;
+  bottom: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.offerData {
+  background: var(--btns-background);
+  color: var(--white);
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+.discounts ul li {
+  list-style: none;
+  padding-left: 0.8rem;
+}
+
+.delivery {
+  display: flex;
+  margin: 2rem 1rem 1rem 0;
+}
+
+.delivery h4 {
+  margin-right: 1.5rem;
+  color: var(--grey);
+}
+
+.delivery input {
+  border: none;
+  border-bottom: 2px solid var(--btns-background);
+  margin-right: 1rem;
+}
+
+.delivery input:focus {
+  outline: none;
+}
+
+.delivery .check {
+  color: var(--btns-background);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quantityData {
+  border: 1px solid rgb(62, 62, 233);
+  padding: 5px 20px;
+  margin: 0 0.4rem;
+}
+
+.quantityData .quantity {
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+.quantityActive {
+  background-color: var(--btns-background);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.aboutProducts,
+#ratingSection {
+  border: 2px solid var(--grey);
+  width: 20rem;
+  padding: 1rem 1rem;
+}
+
+#ratingSection {
+  margin-top: 2rem;
+}
+
+.aboutProductsgrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.aboutProducts-two-columns {
+  grid-template-columns: 30% 70%;
+}
+
+.Products-two-columns {
+  margin-top: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.aboutProducts p {
+  text-align: left;
+}
+
+.aboutProducts p {
+  margin: 1.2rem 0 0;
+}
+
+.aboutProducts p b {
+  margin-right: 1rem;
+}
+
+.aboutProducts p span {
+  text-align: right;
+  align-items: center;
+}
+
+.productsDescriptionBox .productImage .mainImageDiv img:hover {
+  position: relative;
+  transform: scale(1.2);
+}
+
+.grid-sales {
+  padding: 0;
+}
+
+.container-sales {
+  padding: 0 1rem;
+}
+
+.common-heading {
+  margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width:950px) {
+  .productsDescriptionBox {
+    margin: 0 3rem;
+  }
+
+  .mainImageDiv img {
+    height: 12rem;
+  }
+
+  .grid-sales-two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-image {
+    display: grid;
+    place-items: center;
+    border: none;
+  }
+
+  .sales-image img {
+    display: none;
+  }
+}
+
+@media screen and (max-width:820px) {
+  .productsDescriptionBox {
+    margin: 0 2rem;
+  }
+
+  .mainImageDiv img {
+    height: 10rem;
+  }
+
+  .grid-sales-four-column {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width:720px) {
+  .productsDescriptionBox {
+    margin: 0 2rem;
+  }
+
+  .mainImageDiv img {
+    height: 10rem;
+    justify-content: space-around;
+  }
+
+  .productgrid-two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .productDec {
+    height: 20rem;
+  }
+
+  .addToCart {
+    width: max-content;
+    height: max-content;
+    padding: 0.6rem;
+  }
+
+  .Products-two-columns {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width:620px) {
+  .productDiscounts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:540px) {
+  .figCaptionDiv,
+  .rating,
+  .productDetails,
+  .productPrice,
+  .amountDiv,
+  .productPrice .ratings,
+  .productBox .ratings span {
+    font-size: 0.6rem;
+  }
+
+  .figCaptionDiv {
+    min-height: 2rem;
+  }
+
+  .addWishlistDiv .btnD {
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    font-size: 0.5rem;
+  }
+
+  .productBox {
+    height: 16rem;
+  }
+
+  .btnD{
+    padding: 0.3rem;
+    font-size: 0.5rem;
+  }
+
+  .price-box{
+    padding: 0.1rem;
+  }
+
+}
+
+@media screen and (max-width:320px) {
+  .productDec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
