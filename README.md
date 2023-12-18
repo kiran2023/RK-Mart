@@ -83,8 +83,11 @@ It has major filtration features where users can search the products
 # Sample Payment Page
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/c5b42fb9-d9f6-456a-9c1d-9f1129c17041">
 
-# Myorders Page
+# Myorders Page - Download Receipt
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/d99a5f0f-4d60-44d2-a582-7ffc40899196">
+
+# Myorders - User Rating After Product Delivery
+<img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/d6ce0a5b-5da2-4421-a2d8-89289f2d880d">
 
 # Admin
 
