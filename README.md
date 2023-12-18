@@ -43,7 +43,7 @@ It has major filtration features where users can search the products
 
 # User
 
-<div>
+<div style="margin-bottom:2rem">
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/9606449b-addb-4fdf-9f99-122bdee34f44">
 </div>
 <div>
