@@ -107,7 +107,7 @@ It has major filtration features where users can search the products
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/45d7f803-8ff8-412a-8b8e-2aee6cf854c0">
 
 # Manage Orders
-<img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/89c19f5c-e580-47b8-9e54-b386fa63748c">
+<img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/61b12a8b-1195-4f8a-98f1-b697e3b8d0ba">
 
 # Manage Queries
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/42e2cb13-1663-4abb-b0d8-bd6c3e1c7756">
