@@ -1,4 +1,4 @@
-<img width="939" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/69e3954f-95ee-4981-beb8-8c9d1a21cab2">## RK MART
+## RK MART
 RK Mart is an online shopping site that caters to every need of your family. A self-service shop offering a wide range of variety of products in various categories such as Vegetables and household, fruits, and Beverages.
 
 Technology Used - HTML, CSS, Typescript, Angular, JSON Server
@@ -56,7 +56,7 @@ It has major filtration features where users can search the products
 # Login Pop-Up Modal
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/c44c678d-2d02-416d-8178-e68176b1a34e">
 
-# Register pop-up modal
+# Register Pop-Up Modal
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/29e13111-53bb-415a-a44f-996b6599bb12">
 
 # User - Registration Validation
@@ -94,9 +94,10 @@ It has major filtration features where users can search the products
 # Admin Privileges
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/e50dcb06-b338-4102-ba2a-e5b1982714f7">
 
-# Manage Products - Add / Remove / Update 
+# Manage Products
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/e5c6e25c-91fd-46df-b429-e7edfeb83f81">
 
+# Manage Products - Add / Remove / Update 
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/1522b27f-0ce5-4a7e-b844-9e4b3c3d0004">
 
 # Product Categories - Add / Remove / Update
