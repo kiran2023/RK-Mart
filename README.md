@@ -43,10 +43,12 @@ It has major filtration features where users can search the products
 
 # User
 
+<div>
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/9606449b-addb-4fdf-9f99-122bdee34f44">
-<br>
+</div>
+<div>
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/a3c7afda-6249-44e3-b42c-7eaf5a882987">
-<br>
+</div>
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/5d792c7c-3649-4865-b786-ea327a0be9b7">
 
 <img width="930" alt="image" src="https://github.com/kiran2023/RK-Mart/assets/88279441/b030965f-c581-439f-a86b-dede582766f0">
